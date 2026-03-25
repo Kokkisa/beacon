@@ -10,6 +10,8 @@ import VerifyEmail from './pages/auth/VerifyEmail';
 // App pages
 import Dashboard from './pages/dashboard/Dashboard';
 import Integrations from './pages/integrations/Integrations';
+import Syncs from './pages/syncs/Syncs';
+import NewSync from './pages/syncs/NewSync';
 
 // Landing page
 function Landing() {
@@ -57,6 +59,22 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Integrations />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/syncs"
+          element={
+            <ProtectedRoute>
+              <Syncs />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/syncs/new"
+          element={
+            <ProtectedRoute>
+              <NewSync />
             </ProtectedRoute>
           }
         />

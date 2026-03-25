@@ -7,6 +7,7 @@ import logger from './utils/logger';
 import { errorHandler } from './middleware/errorHandler';
 import authRoutes from './routes/authRoutes';
 import integrationRoutes from './routes/integrationRoutes';
+import syncRoutes from './routes/syncRoutes';
 
 const app: Express = express();
 const PORT = process.env.PORT || 3001;
@@ -32,6 +33,7 @@ app.get('/health', (req, res) => {
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/integrations', integrationRoutes);
+app.use('/api/syncs', syncRoutes);
 
 // 404 handler
 app.use((req, res) => {

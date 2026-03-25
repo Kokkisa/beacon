@@ -44,12 +44,12 @@ export default function Dashboard() {
             >
               📊 Dashboard
             </Link>
-            <a
-              href="#"
+            <Link
+              to="/syncs"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors"
             >
               🔄 Syncs
-            </a>
+            </Link>
             <Link
               to="/integrations"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors"
