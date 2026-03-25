@@ -1,7 +1,10 @@
 {
   "version": 2,
-  "framework": "vite",
-  "buildCommand": "cd apps/web && pnpm run build",
-  "installCommand": "pnpm install",
-  "outputDirectory": "apps/web/dist"
+  "public": "apps/web/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
