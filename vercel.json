@@ -1,21 +1,19 @@
 {
   "version": 2,
-  "installCommand": "pnpm install --prod=false --no-frozen-lockfile --ignore-scripts",
-  "buildCommand": "pnpm -F @beacon/web run build",
-  "outputDirectory": "apps/web/dist",
+  "builds": [
+    {
+      "src": "apps/web/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist",
+        "buildCommand": "pnpm run build"
+      }
+    }
+  ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/index.ts",
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH"]
-    },
-    {
-      "src": "/health",
-      "dest": "/api/index.ts"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "index.html"
     }
   ]
 }
