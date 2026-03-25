@@ -6,6 +6,7 @@ import 'dotenv/config';
 import logger from './utils/logger';
 import { errorHandler } from './middleware/errorHandler';
 import authRoutes from './routes/authRoutes';
+import integrationRoutes from './routes/integrationRoutes';
 
 const app: Express = express();
 const PORT = process.env.PORT || 3001;
@@ -30,6 +31,7 @@ app.get('/health', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/integrations', integrationRoutes);
 
 // 404 handler
 app.use((req, res) => {

@@ -9,6 +9,7 @@ import VerifyEmail from './pages/auth/VerifyEmail';
 
 // App pages
 import Dashboard from './pages/dashboard/Dashboard';
+import Integrations from './pages/integrations/Integrations';
 
 // Landing page
 function Landing() {
@@ -48,6 +49,14 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/integrations"
+          element={
+            <ProtectedRoute>
+              <Integrations />
             </ProtectedRoute>
           }
         />

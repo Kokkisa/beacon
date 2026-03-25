@@ -1,5 +1,5 @@
 import { useAuthStore } from '../../store/authStore';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Dashboard() {
   const { user, logout } = useAuthStore();
@@ -38,24 +38,24 @@ export default function Dashboard() {
         {/* Sidebar */}
         <aside className="w-64 bg-beacon-card border-r border-gray-700">
           <nav className="p-4 space-y-2">
-            <a
-              href="#"
+            <Link
+              to="/dashboard"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors"
             >
               📊 Dashboard
-            </a>
+            </Link>
             <a
               href="#"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors"
             >
               🔄 Syncs
             </a>
-            <a
-              href="#"
+            <Link
+              to="/integrations"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors"
             >
               🔗 Integrations
-            </a>
+            </Link>
             <a
               href="#"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors"
