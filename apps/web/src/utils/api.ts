@@ -8,7 +8,8 @@ declare global {
   }
 }
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// Use relative /api path for Vercel serverless, or custom URL if provided
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 const api: AxiosInstance = axios.create({
   baseURL: API_URL,
@@ -37,7 +38,7 @@ api.interceptors.response.use(
 
       try {
         const refreshToken = localStorage.getItem('refreshToken');
-        const response = await axios.post(`${API_URL}/api/auth/refresh`, {
+        const response = await axios.post(`/api/auth/refresh`, {
           refreshToken,
         });
 
