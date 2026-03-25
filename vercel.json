@@ -5,15 +5,15 @@
       "src": "apps/web/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist",
-        "buildCommand": "pnpm run build"
+        "distDir": "apps/web/dist",
+        "buildCommand": "cd apps/web && pnpm install && pnpm run build"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "index.html"
+      "dest": "/index.html"
     }
   ]
 }
