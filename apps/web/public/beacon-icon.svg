@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Beacon light bulb icon -->
+  <circle cx="100" cy="100" r="95" stroke="#F59E0B" stroke-width="2"/>
+
+  <!-- Light bulb shape -->
+  <path d="M 100 40 C 90 40 85 50 85 60 C 85 70 90 75 90 85 L 110 85 C 110 75 115 70 115 60 C 115 50 110 40 100 40 Z" fill="#F59E0B"/>
+
+  <!-- Bulb socket -->
+  <rect x="92" y="85" width="16" height="10" fill="#F59E0B"/>
+
+  <!-- Base -->
+  <rect x="88" y="95" width="24" height="15" fill="#F59E0B" rx="2"/>
+
+  <!-- Light rays -->
+  <line x1="100" y1="20" x2="100" y2="10" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="145" y1="55" x2="152" y2="48" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="165" y1="100" x2="175" y2="100" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="145" y1="145" x2="152" y2="152" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+
+  <line x1="55" y1="55" x2="48" y2="48" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="35" y1="100" x2="25" y2="100" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="55" y1="145" x2="48" y2="152" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+</svg>
